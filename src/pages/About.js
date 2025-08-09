@@ -1,5 +1,12 @@
+import { motion } from 'framer-motion';
 export default function About() {
   return (
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.8, ease: "easeOut" }}
+      className="min-h-screen bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100"
+    >
     <section className="max-w-4xl mx-auto p-8 text-gray-800 dark:text-gray-200">
       <h1 className="text-4xl font-bold mb-6 text-center text-primary-dark dark:text-primary-light">About DineEasy</h1>
       <p className="mb-4 leading-relaxed">
@@ -16,5 +23,6 @@ export default function About() {
         className="rounded-lg shadow-lg mx-auto"
       />
     </section>
+    </motion.div>
   );
 }

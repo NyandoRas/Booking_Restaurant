@@ -6,6 +6,10 @@ import About from './pages/About';
 import Booking from './pages/Booking';
 import Confirmation from './pages/Confirmation';
 import Restaurants from './pages/Restaurants';
+import FloatingButton from "./components/FloatingButton";
+import Contact from "./pages/Contact";
+import BackToTop from "./components/BackToTop";
+
 
 function App() {
   return (
@@ -18,9 +22,12 @@ function App() {
           <Route path="/booking" element={<Booking />} />
           <Route path="/confirmation" element={<Confirmation />} />
           <Route path="/restaurants" element={<Restaurants />} />
+          <Route path="/contact" element={<Contact />} />
         </Routes>
       </main>
       <Footer />
+      <FloatingButton />
+      <BackToTop />
     </div>
   );
 }

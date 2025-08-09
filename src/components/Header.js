@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { HiMenu, HiX } from 'react-icons/hi';
 
+
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [darkMode, setDarkMode] = useState(false);
@@ -23,6 +24,7 @@ export default function Header() {
     { to: '/restaurants', label: 'Restaurants' },
     { to: '/booking', label: 'Book a Table' },
     { to: '/about', label: 'About' },
+    { to: '/contact', label: 'Contact' },   
   ];
 
   return (

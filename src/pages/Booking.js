@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { motion } from 'framer-motion';
 
 export default function Booking() {
   const navigate = useNavigate();
@@ -41,6 +42,12 @@ export default function Booking() {
   };
 
   return (
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.8, ease: "easeOut" }}
+      className="min-h-screen bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100"
+    >
     <div className="max-w-lg mx-auto bg-white rounded-xl shadow-md p-8">
       <h2 className="text-3xl font-bold mb-6 text-center text-purple-700">Book Your Table</h2>
 
@@ -123,5 +130,6 @@ export default function Booking() {
         </button>
       </form>
     </div>
+    </motion.div>
   );
 }
